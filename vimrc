@@ -34,6 +34,8 @@ endfunction
 " display
 " ==========
 
+call GU_tabIndent(4)
+
 set number relativenumber
 let g:netrw_bufsettings='noma nomod number relativenumber' " line numbers in explorer
 
@@ -79,7 +81,7 @@ set directory=~/.vim_backups
 set autoindent
 
 set belloff=all
-set mouse-=a " disable mouse
+"set mouse-=a " disable mouse
 
 set notimeout nottimeout " leader-keys wont time out for remaps
 
