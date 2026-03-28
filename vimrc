@@ -120,7 +120,8 @@ nnoremap -cgg gg/^[^#]<enter>
 nmap -ha -hpd}k0wi[<esc>A](<c-r>o)<esc>jdd
 nnoremap -hr _a <esc>la <esc>la <esc>la <esc>la <esc>la <esc>la <esc>lls<enter><esc>
 nmap -hb o<enter><tab><c-r>%<esc>:s/-/./g<enter>$xxx-hr-hr-hr-hr-hr-hr-hr-hr I(<esc>A)<enter><esc>
-nnoremap -hp }{"wy}}pJJr_Jr_Jr_Jr_Jr_Jr_Jr_Jr_vi(:s/w/C/ge<enter>vi(:s/b/w/ge<enter>vi(:s/C/b/ge<enter>0f(xf)x:s/\s//g<enter>:s/\./-/g<enter>0"oy$ddk{
+nnoremap -hh :e rnbqkbnr_pppppppp_--------_--------_--------_--------_PPPPPPPP_RNBQKBNR_w.md
+nnoremap -hp }{"wy}}pJJr_Jr_Jr_Jr_Jr_Jr_Jr_ j:s/w/C/ge<enter>:s/b/w/ge<enter>:s/C/b/ge<enter>0f(xf)xkJr_ :s/\s//g<enter>:s/\./-/g<enter>0"oy$ddk{
 
 
 nnoremap -i1 miyygg/INDEX<enter>}zzPI* <esc>
