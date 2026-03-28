@@ -96,6 +96,13 @@ nnoremap -<c-p> :r ~/.vim_clipboard.txt<enter>
 nmap -<c-y> V-<c-y>
 
 nnoremap -:s :source ~/.vimrc<enter>
+nnoremap -:<space> :call GU_spaceIndent(4)<enter>
+nnoremap -:<tab> :call GU_tabIndent(4)<enter>
+nnoremap -:4<tab> :call GU_tabIndent(4)<enter>
+nnoremap -:8<tab> :call GU_tabIndent(8)<enter>
+nnoremap -:cc :set colorcolumn=80<enter>
+nnoremap -:cc0 :set colorcolumn=0<enter>
+nnoremap -:cc80 :set colorcolumn=80<enter>
 
 nnoremap -<tab>0n /^[^ \t]<enter>
 nnoremap -<tab>0N ?^[^ \t]<enter>
@@ -112,8 +119,8 @@ nnoremap -cgg gg/^[^#]<enter>
 " chessmap utilities
 nmap -ha -hpd}k0wi[<esc>A](<c-r>o)<esc>jdd
 nnoremap -hr _a <esc>la <esc>la <esc>la <esc>la <esc>la <esc>la <esc>lls<enter><esc>
-nmap -hb o<enter><tab><c-r>%<esc>:s/-/./g<enter>$xx-hr-hr-hr-hr-hr-hr-hr-hr
-nnoremap -hp }{"wy}}pJJr_Jr_Jr_Jr_Jr_Jr_Jr_:s/\s//g<enter>:s/\./-/g<enter>0"oy$ddk{
+nmap -hb o<enter><tab><c-r>%<esc>:s/-/./g<enter>$xxx-hr-hr-hr-hr-hr-hr-hr-hr I(<esc>A)<enter><esc>
+nnoremap -hp }{"wy}}pJJr_Jr_Jr_Jr_Jr_Jr_Jr_Jr_vi(:s/w/C/ge<enter>vi(:s/b/w/ge<enter>vi(:s/C/b/ge<enter>0f(xf)x:s/\s//g<enter>:s/\./-/g<enter>0"oy$ddk{
 
 
 nnoremap -i1 miyygg/INDEX<enter>}zzPI* <esc>
@@ -170,8 +177,8 @@ nmap -mir6 -mi6`i
 
 nnoremap -mix I<br><enter><enter><!-- INDEX --><enter><enter><br><enter><esc>
 
-nnoremap -mlg mB%lF[f]"wyi(:e <c-r>w.md<enter>
-nnoremap -mlG mB%lF[f]"wyi(:tabe <c-r>w.md<enter>
+nnoremap -mlg mB%lF[f]"wyi(:e <c-r>w.md<enter><enter>
+nnoremap -mlG mB%lF[f]"wyi(:tabe <c-r>w.md<enter><enter>
 
 
 nnoremap -t, f,lr<enter>
