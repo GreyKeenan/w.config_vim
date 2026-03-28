@@ -95,6 +95,8 @@ nnoremap - <Nop>
 nnoremap -<c-p> :r ~/.vim_clipboard.txt<enter>
 nmap -<c-y> V-<c-y>
 
+nnoremap -:s :source ~/.vimrc<enter>
+
 nnoremap -<tab>0n /^[^ \t]<enter>
 nnoremap -<tab>0N ?^[^ \t]<enter>
 nnoremap -<tab>n _v0"sy/^<c-r>s<backspace>[^ \t]<enter>
@@ -105,6 +107,13 @@ nnoremap -ce _cW,ea =j0
 	" define to enum
 nnoremap -cf _"sy/(<enter>j/\C<c-r>s<enter>
 nnoremap -cgg gg/^[^#]<enter>
+
+
+" chessmap utilities
+nmap -ha -hpd}k0wi[<esc>A](<c-r>o)<esc>jdd
+nnoremap -hr _a <esc>la <esc>la <esc>la <esc>la <esc>la <esc>la <esc>lls<enter><esc>
+nmap -hb o<enter><tab><c-r>%<esc>:s/-/./g<enter>$xx-hr-hr-hr-hr-hr-hr-hr-hr
+nnoremap -hp }{"wy}}pJJr_Jr_Jr_Jr_Jr_Jr_Jr_:s/\s//g<enter>:s/\./-/g<enter>0"oy$ddk{
 
 
 nnoremap -i1 miyygg/INDEX<enter>}zzPI* <esc>
@@ -142,12 +151,12 @@ nmap -iu52 -i5dd2kP
 nmap -iu62 -i6dd2kP
 
 
-nnoremap -mi1 mi_wy$gg/INDEX<enter>}zzPI* <esc>
-nnoremap -mi2 mi_wy$gg/INDEX<enter>}zzPI  * <esc>
-nnoremap -mi3 mi_wy$gg/INDEX<enter>}zzPI    * <esc>
-nnoremap -mi4 mi_wy$gg/INDEX<enter>}zzPI      * <esc>
-nnoremap -mi5 mi_wy$gg/INDEX<enter>}zzPI        * <esc>
-nnoremap -mi6 mi_wy$gg/INDEX<enter>}zzPI          * <esc>
+nnoremap -mi1 mi_wy$gg/INDEX<enter>}zzPI* <esc>o<esc>
+nnoremap -mi2 mi_wy$gg/INDEX<enter>}zzPI  * <esc>o<esc>
+nnoremap -mi3 mi_wy$gg/INDEX<enter>}zzPI    * <esc>o<esc>
+nnoremap -mi4 mi_wy$gg/INDEX<enter>}zzPI      * <esc>o<esc>
+nnoremap -mi5 mi_wy$gg/INDEX<enter>}zzPI        * <esc>o<esc>
+nnoremap -mi6 mi_wy$gg/INDEX<enter>}zzPI          * <esc>o<esc>
 
 nnoremap -mig 0"syi[/<c-r>s$<enter>ztkj
 nnoremap -mil _W"wy$i[<esc>A]<esc>o<esc>0D"wpVu:silent! s/[^a-z ]//g<enter>:silent! s/ /-/g<enter>0"wy$ddkA(#<c-r>w)<esc>
@@ -160,6 +169,9 @@ nmap -mir5 -mi5`i
 nmap -mir6 -mi6`i
 
 nnoremap -mix I<br><enter><enter><!-- INDEX --><enter><enter><br><enter><esc>
+
+nnoremap -mlg mB%lF[f]"wyi(:e <c-r>w.md<enter>
+nnoremap -mlG mB%lF[f]"wyi(:tabe <c-r>w.md<enter>
 
 
 nnoremap -t, f,lr<enter>
