@@ -117,12 +117,27 @@ nnoremap -cgg gg/^[^#]<enter>
 
 
 " chessmap utilities
-nmap -ha -hpd}k0wi[<esc>A](<c-r>o)<esc>jdd
-nnoremap -hr _a <esc>la <esc>la <esc>la <esc>la <esc>la <esc>la <esc>lls<enter><esc>
-nmap -hb o<enter><tab><c-r>%<esc>:s/-/./g<enter>$xxx-hr-hr-hr-hr-hr-hr-hr-hr I(<esc>A)<enter><esc>
-nnoremap -hh :e rnbqkbnr_pppppppp_--------_--------_--------_--------_PPPPPPPP_RNBQKBNR_w.md
-nnoremap -hp }{"wy}}pJJr_Jr_Jr_Jr_Jr_Jr_Jr_ j0f(la<enter><esc>k:s/w/C/ge<enter>:s/b/w/ge<enter>:s/C/b/ge<enter>J0f(xf)xkJr_ :s/\s//g<enter>:s/\./-/g<enter>0"oy$ddk{
+nnoremap -hh :e rnbqkbnr_pppppppp_--------_--------_--------_--------_PPPPPPPP_RNBQKBNR_w.md<enter>
+nmap -hB ornbqkbnr_pppppppp_--------_--------_--------_--------_PPPPPPPP_RNBQKBNR_w.md<c-c>-hTn
+nnoremap -hd }{y}}Po<c-c>
+nmap -hb o<c-r>%<c-c>-hTn
+nmap -hl -htNk0wi[<c-c>A](<c-c>gJA)<c-c>
+nmap -hA -hbdd-hd-htfyyp-ht_lkI[<c-c>A](<c-c>gJA)<c-c>"wddo> <c-c>mvo<enter>* <enter><enter><br><c-c>"wpo<enter>---<enter><c-c>`v
+nmap -hml -hd-htfyyp-ht_lkI[<c-c>A](<c-c>gJA)<c-c>"wdd}}o<enter><br><c-c>"wp
 
+nnoremap -ht_f1 :s/11111111/8/ge<enter>:s/1111111/7/ge<enter>:s/111111/6/ge<enter>:s/11111/5/ge<enter>:s/1111/4/ge<enter>:s/111/3/ge<enter>:s/11/2/ge<enter>
+nnoremap -ht_l Ihttps://lichess.org/analysis/fromPosition/<c-c>:s/ /_/ge<enter>
+
+nmap -htf }{JJr/Jr/Jr/Jr/Jr/Jr/Jr/:s/\s//g<enter>:s/\./1/g<enter>j0f(l"wx:s/\([a-h]\)/\1<c-r>w/e<enter>:s/w/6/e<enter>:s/\([a-h]\)b/\13/e<enter>:s/()/(-)/e<enter>0df(f)x0"wPa KQkq <c-c>kJJ-ht_f1
+nnoremap -htn }{JJr_Jr_Jr_Jr_Jr_Jr_Jr_j0f(xf)xkJr_J:s/\s//ge<enter>:s/\./-/ge<enter>
+nnoremap -htN }{JJr_Jr_Jr_Jr_Jr_Jr_Jr_j:s/w/C/e<enter>:s/b/w/e<enter>:s/C/b/e<enter>0f(xf)xkJr_J:s/\s//ge<enter>:s/\./-/ge<enter>
+nmap -htl -htf-ht_l
+
+nnoremap -hT_r _a <esc>la <esc>la <esc>la <esc>la <esc>la <esc>la <esc>la<enter><esc>
+nmap -hT_b O<esc>j-hT_r-hT_r-hT_r-hT_r-hT_r-hT_r-hT_r-hT_rddp{
+
+nmap -hTf I<tab><c-c>$? [wb] <enter>r<enter>:s/[0-9 -KQkq]//ge<enter>I(<c-c>A)<c-c>k :s/1/./ge<enter>:s/2/../ge<enter>:s/3/.../ge<enter>:s/4/..../ge<enter>:s/5/...../ge<enter>:s/6/....../ge<enter>:s/7/......./ge<enter>:s/8/......../ge<enter>:s/\///ge<enter>-hT_b
+nmap -hTn I<tab><c-c>$F.d$F_r<enter>I(<c-c>A)<c-c>k:s/-/./ge<enter>:s/_//ge<enter>-hT_b
 
 nnoremap -i1 miyygg/INDEX<enter>}zzPI* <esc>
 nnoremap -i2 miyygg/INDEX<enter>}zzPI  * <esc>
