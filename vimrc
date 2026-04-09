@@ -117,28 +117,43 @@ nnoremap -cgg gg/^[^#]<enter>
 
 
 " chessmap utilities
-nnoremap -hh :e rnbqkbnr_pppppppp_--------_--------_--------_--------_PPPPPPPP_RNBQKBNR_w.md<enter>
-nmap -hB ornbqkbnr_pppppppp_--------_--------_--------_--------_PPPPPPPP_RNBQKBNR_w.md<c-c>-hTn
+nnoremap -hh :e rnbqkbnrpppppppp8888PPPPPPPPRNBQKBNRw.md<enter>
 nnoremap -hd }{y}}Po<c-c>
-nmap -hb o<c-r>%<c-c>-hTn
-nmap -hl -htNk0wi[<c-c>A](<c-c>gJA)<c-c>
-nmap -hA -hbdd-hd-htfyyp-ht_lkI[<c-c>A](<c-c>gJA)<c-c>"wddo> <c-c>mvo<enter>* <enter><enter><br><c-c>"wpo<enter>---<enter><c-c>`v
-nmap -hml -hd-htfyyp-ht_lkI[<c-c>A](<c-c>gJA)<c-c>"wdd}}o<enter><br><c-c>"wp
 
-nnoremap -ht_f1 :s/11111111/8/ge<enter>:s/1111111/7/ge<enter>:s/111111/6/ge<enter>:s/11111/5/ge<enter>:s/1111/4/ge<enter>:s/111/3/ge<enter>:s/11/2/ge<enter>
-nnoremap -ht_l Ihttps://lichess.org/analysis/fromPosition/<c-c>:s/ /_/ge<enter>
+nmap -hA "%p0f.D-htnfyypk-htfb}o> <enter><enter>* <enter><enter><br><c-c>jyyp-htflkI[<c-c>A](<c-c>gJA)<enter><c-c>gg}j$
+nmap -hb o<c-r>%<c-c>0f.D0-htnb
+nmap -hB ornbqkbnrpppppppp8888PPPPPPPPRNBQKBNRw<c-c>-htnb
 
-nmap -htf }{JJr/Jr/Jr/Jr/Jr/Jr/Jr/:s/\s//g<enter>:s/\./1/g<enter>j0f(l"wx:s/\([a-h]\)/\1<c-r>w/e<enter>:s/w/6/e<enter>:s/\([a-h]\)b/\13/e<enter>:s/()/(-)/e<enter>0df(f)x0"wPa KQkq <c-c>kJJ-ht_f1
-nnoremap -htn }{JJr_Jr_Jr_Jr_Jr_Jr_Jr_j0f(xf)xkJr_J:s/\s//ge<enter>:s/\./-/ge<enter>
-nnoremap -htN }{JJr_Jr_Jr_Jr_Jr_Jr_Jr_j:s/w/C/e<enter>:s/b/w/e<enter>:s/C/b/e<enter>0f(xf)xkJr_J:s/\s//ge<enter>:s/\./-/ge<enter>
-nmap -htl -htf-ht_l
+nmap -hl_swap :s/\( w \<bar> b \)/\={' w ':' b ',' b ':' w '}[submatch(1)]/ge<enter>0
+nmap -hl -htbn-hl_swapk0wi[<c-c>A](<c-c>gJA)<c-c>
+"NOT UPDATED: nmap -hml -hd-htfyyp-ht_lkI[<c-c>A](<c-c>gJA)<c-c>"wdd}}o<enter><br><c-c>"wp
 
-nnoremap -hT_r _a <esc>la <esc>la <esc>la <esc>la <esc>la <esc>la <esc>la<enter><esc>
-nmap -hT_b O<esc>j-hT_r-hT_r-hT_r-hT_r-hT_r-hT_r-hT_r-hT_rddp{
+nnoremap -ht_numerize :s/\s//ge<enter>:s/\./1/ge<enter>
+nnoremap -ht_denumerize :s/1/./ge<enter>:s/\(.\)/\1 /ge<enter>
+nnoremap -ht_collapse :s/\(11111111\<bar>1111111\<bar>111111\<bar>11111\<bar>1111\<bar>111\<bar>11\)/\={'11':'2','111':'3','1111':'4','11111':'5','111111':'6','1111111':'7','11111111':'8'}[submatch(1)]/ge<enter>
+nnoremap -ht_expand :s/\(8\<bar>7\<bar>6\<bar>5\<bar>4\<bar>3\<bar>2\)/\={'2':'11','3':'111','4':'1111','5':'11111','6':'111111','7':'1111111','8':'11111111'}[submatch(1)]/ge<enter>
 
-nmap -hTf I<tab><c-c>$? [wb] <enter>r<enter>:s/[0-9 -KQkq]//ge<enter>I(<c-c>A)<c-c>k :s/1/./ge<enter>:s/2/../ge<enter>:s/3/.../ge<enter>:s/4/..../ge<enter>:s/5/...../ge<enter>:s/6/....../ge<enter>:s/7/......./ge<enter>:s/8/......../ge<enter>:s/\///ge<enter>-hT_b
-nmap -hTn I<tab><c-c>$F.d$F_r<enter>I(<c-c>A)<c-c>k:s/-/./ge<enter>:s/_//ge<enter>-hT_b
+nmap -htbf }{JJr/Jr/Jr/Jr/Jr/Jr/Jr/-ht_numerize-ht_collapsej0f(l"wx:s/\([a-h]\)/\1<c-r>w/e<enter>:s/w/6/e<enter>:s/\([a-h]\)b/\13/e<enter>:s/()/(-)/e<enter>0df(f)x0"wPa KQkq <c-c>kJJ
+nmap -htfb O<c-c>j0f r/o<c-c>k-ht_expand-ht_denumerize:s/ \/ /\r/ge<enter>:s/[0-9 -KQkq]//ge<enter>I(<c-c>A)<c-c>{>}
 
+nmap -htfn :s/\///g<enter>0f r<enter>:s/[0-9 -KQkq]//ge<enter>kgJ0
+nmap -htbn -htbf-htfn
+nmap -htnf -ht_expand:s/\(........\)/\1\//g<enter>-ht_collapse$F/r<enter>I(<c-c>A)<c-c>_l"wx:s/\([a-h]\)/\1<c-r>w/e<enter>:s/w/6/e<enter>:s/\([a-h]\)b/\13/e<enter>:s/()/(-)/e<enter>_xf)x0"wPa KQkq <c-c>kJ
+"TODO the () thing is scuffed cuz copied from above and made work
+nmap -htnb -htnf-htfb
+
+nnoremap -htfl Ihttps://lichess.org/analysis/fromPosition/<c-c>:s/ /_/ge<enter>
+nnoremap -htlf _42x:s/_/ /g<enter>
+
+nnoremap -htnm I[linkname](<c-c>A)<c-c>0
+nmap -htbm -htbn-htnm
+
+" TEMP for converting from old names
+" nmap -hton :s/\s//ge<enter>:s/-/1/ge<enter>-ht_collapse:s/_//ge<enter>
+" nmap -hfix 0/](<enter>"wyi(o<c-r>w<c-c>-hton k0/](<enter>llDgJA)<c-c>j
+
+
+" rawtext index shortcuts
 nnoremap -i1 miyygg/INDEX<enter>}zzPI* <esc>
 nnoremap -i2 miyygg/INDEX<enter>}zzPI  * <esc>
 nnoremap -i3 miyygg/INDEX<enter>}zzPI    * <esc>
