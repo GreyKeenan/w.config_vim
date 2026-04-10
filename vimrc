@@ -124,8 +124,9 @@ nmap -hA "%p0f.D-htnfyypk-htfb}o> <enter><enter>* <enter><enter><br><c-c>jyyp-ht
 nmap -hb o<c-r>%<c-c>0f.D0-htnb
 nmap -hB ornbqkbnrpppppppp8888PPPPPPPPRNBQKBNRw<c-c>-htnb
 
-nmap -hl_swap :s/\( w \<bar> b \)/\={' w ':' b ',' b ':' w '}[submatch(1)]/ge<enter>0
-nmap -hl -htbn-hl_swapk0wi[<c-c>A](<c-c>gJA)<c-c>
+nmap -h_swap :s/\( w \<bar> b \)/\={' w ':' b ',' b ':' w '}[submatch(1)]/ge<enter>0
+
+nmap -hl -htbf-h_swap-htfnk0wi[<c-c>A](<c-c>gJA)<c-c>:redraw<enter>
 "NOT UPDATED: nmap -hml -hd-htfyyp-ht_lkI[<c-c>A](<c-c>gJA)<c-c>"wdd}}o<enter><br><c-c>"wp
 
 nnoremap -ht_numerize :s/\s//ge<enter>:s/\./1/ge<enter>
